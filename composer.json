@@ -1,0 +1,29 @@
+{
+  "name": "dpb/ui",
+  "description": "UI Components Package",
+  "license": "MIT",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Bruno Dilhof",
+      "email": "dilhof.bruno@dpb.sk",
+      "role": "Web Application Developer"
+    }
+  ],
+  "require": {
+    "php": "^8",
+    "illuminate/support": "^10.0"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Dpb\\Ui\\UiServiceProvider"
+      ]
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "Dpb\\Ui\\": "src"
+    }
+  }
+}
