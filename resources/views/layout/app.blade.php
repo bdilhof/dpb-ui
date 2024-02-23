@@ -15,18 +15,18 @@
   </head>
 
   <body id="app" class="bg-light">
-    @include("_partials.navigation")
+    <!-- @include("_partials.navigation") -->
 
     <main class="py-4">
         <div class="container-xl vstack gap-4">
-            @include('_partials.flash-messages')
+            <!-- @include('_partials.flash-messages') -->
 
             <!-- Header -->
             <div class="row">
                 <div class="col">
                     <div class="d-md-flex justify-content-between align-items-center">
                         <div class="hstack gap-3">
-                            <x-ui.page-header :backUrl="$backUrl" text="{{ $title }}" />
+                            <x-ui::page-header :backUrl="$backUrl" text="{{ $title }}" />
                         </div>
                         <div class="hstack gap-2 text-nowrap">
                             {{ $buttons ?? null }}

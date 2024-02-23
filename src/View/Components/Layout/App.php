@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components\UI\Layout;
+namespace Dpb\Ui\View\Components\Layout;
 
 use Closure;
 use Illuminate\Contracts\View\View;
@@ -26,6 +26,6 @@ class App extends Component
 
     public function render(): View|Closure|string
     {
-        return view('components.ui.layout.app');
+        return view('ui::layout.app');
     }
 }

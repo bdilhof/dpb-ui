@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components\UI\Buttons;
+namespace Dpb\Ui\View\Components\Buttons;
 
 use Closure;
 use Illuminate\Contracts\View\View;
@@ -41,6 +41,6 @@ class Button extends Component
 
     public function render()
     {
-        return view('components.ui.buttons.button');
+        return view('ui::buttons.button');
     }
 }

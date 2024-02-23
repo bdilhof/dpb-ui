@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components\UI;
+namespace Dpb\Ui\View\Components;
 
 use Closure;
 use Illuminate\Contracts\View\View;
@@ -15,6 +15,6 @@ class PageHeader extends Component
 
     public function render()
     {
-        return view('ui.components.page-header');
+        return view('ui::page-header');
     }
 }

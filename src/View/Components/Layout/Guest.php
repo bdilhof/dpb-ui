@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components\UI\Layout;
+namespace Dpb\Ui\View\Components\Layout;
 
 use Closure;
 use Illuminate\Contracts\View\View;
@@ -26,6 +26,6 @@ class Guest extends Component
 
     public function render()
     {
-        return view('components.ui.layout.guest');
+        return view('ui::layout.guest');
     }
 }

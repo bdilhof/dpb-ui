@@ -3,7 +3,7 @@
     "backUrl"
 ])
 
-<x-ui.buttons.button
+<x-ui::buttons.button
     :display="isset($backUrl)"
     :link="$backUrl"
     :text="trans('ui.back')"

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components\UI;
+namespace Dpb\Ui\View\Components;
 
 use Closure;
 use Illuminate\Contracts\View\View;
@@ -15,6 +15,6 @@ class Logo extends Component
 
     public function render(): View|Closure|string
     {
-        return view('ui.components.logo');
+        return view('ui::logo');
     }
 }
