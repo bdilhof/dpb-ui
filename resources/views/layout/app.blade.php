@@ -15,7 +15,21 @@
   </head>
 
   <body id="app" class="bg-light">
-    <!-- @include("_partials.navigation") -->
+
+    @php
+    $navItems = [
+        [
+            "title" => "Osoby",
+            "route" => 'employees.index',
+        ],
+        [
+            "title" => "Lokácie",
+            "route" => 'locations.index',
+        ],
+    ];
+    @endphp
+
+    <x-navbar :items="$navItems" />
 
     <main class="py-4">
         <div class="container-xl vstack gap-4">

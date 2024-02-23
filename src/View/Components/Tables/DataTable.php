@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components\UI\Tables;
+namespace Dpb\Ui\View\Components\Tables;
 
 use Closure;
 use Illuminate\Contracts\View\View;
@@ -15,6 +15,6 @@ class DataTable extends Component
 
     public function render(): View|Closure|string
     {
-        return view('ui::table.data-table');
+        return view('ui::tables.data-table');
     }
 }
