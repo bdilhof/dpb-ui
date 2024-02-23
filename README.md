@@ -5,7 +5,7 @@
 1. Install package
 
 ```bash
-composer require vrmnt/ui
+composer require dpb/ui
 ```
 
 2. Put UiServiceProvider into your project **config/app.php**
@@ -21,7 +21,7 @@ composer require vrmnt/ui
 3. Use components
 
 ```html
-<x-ui::custom-component>
+<x-ui::custom-component></x-ui::custom-component>
 ```
 
 ## Components
@@ -64,20 +64,20 @@ $menu = [
 
 ```html
 <x-ui::table>
-    <x-slot name="thead">
-        <tr class="align-middle">
-            <th>{{ __('item.title')}}</th>
-        </tr>
-    </x-slot>
-    <x-slot name="tbody">
-        @forelse($collection as $item)
-        <tr class="align-middle">
-            <td>{{ $item->title}}</td>
-        </tr>
-        @empty
-        <x-ui::table-empty colspan="1" />
-        @endforelse
-    </x-slot>
+  <x-slot name="thead">
+    <tr class="align-middle">
+      <th>{{ __('item.title')}}</th>
+    </tr>
+  </x-slot>
+  <x-slot name="tbody">
+    @forelse($collection as $item)
+    <tr class="align-middle">
+      <td>{{ $item->title}}</td>
+    </tr>
+    @empty
+    <x-ui::table-empty colspan="1" />
+    @endforelse
+  </x-slot>
 </x-ui::table>
 ```
 
@@ -85,15 +85,15 @@ $menu = [
 
 ```html
 <x-ui::filter :url="route('index')" :open="$filter !== null">
-    <x-ui::filter-item>
-        <x-ui::forms.select
-            :label="__('items.column')"
-            :value="$filter['equal']['column'] ?? ''"
-            :options="$options"
-            name="filter[equal][column]"
-            id="column"
-        ></x-ui::forms.select>
-    </x-ui::filter-item>
+  <x-ui::filter-item>
+    <x-ui::forms.select
+      :label="__('items.column')"
+      :value="$filter['equal']['column'] ?? ''"
+      :options="$options"
+      name="filter[equal][column]"
+      id="column"
+    ></x-ui::forms.select>
+  </x-ui::filter-item>
 </x-ui::filter>
 ```
 
@@ -102,45 +102,39 @@ $menu = [
 #### Form
 
 ```html
-<x-ui::form :action="route('stocktakes.store')">
-    ...
-</x-ui::form>
+<x-ui::form :action="route('stocktakes.store')"> ... </x-ui::form>
 ```
+
 > Form component already contains CSRF field and displaying of errors.
 
 #### Input
 
 ```html
 <x-ui::forms.input
-    :label="$label"
-    name=""
-    id=""
-    placeholder=""
-    value=""
-    required="true"
+  :label="$label"
+  name=""
+  id=""
+  placeholder=""
+  value=""
+  required="true"
 ></x-ui::forms.input>
 ```
 
 #### Button
 
 ```html
-<x-ui::button
-    :link="$link"
-    :text=""
-    icon=""
-    type=""
-></x-ui::button>
+<x-ui::button :link="$link" :text="" icon="" type=""></x-ui::button>
 ```
 
 #### Select
 
 ```html
 <x-ui::forms.select2
-    :label="$label"
-    :value="$value"
-    name=""
-    id=""
-    options="$options"
-    required="true"
+  :label="$label"
+  :value="$value"
+  name=""
+  id=""
+  options="$options"
+  required="true"
 ></x-ui::forms.select2>
 ```
