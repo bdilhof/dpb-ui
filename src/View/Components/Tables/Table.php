@@ -15,6 +15,6 @@ class Table extends Component
 
     public function render(): View|Closure|string
     {
-        return view('components.ui.tables.table');
+        return view('ui::tables.table');
     }
 }

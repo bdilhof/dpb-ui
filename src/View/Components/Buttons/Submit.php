@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components\UI\Buttons;
+namespace Dpb\Ui\View\Components\Buttons;
 
 use Closure;
 use Illuminate\Contracts\View\View;
@@ -10,6 +10,6 @@ class submit extends Component
 {
     public function render()
     {
-        return view('components.buttons.submit');
+        return view('ui::buttons.submit');
     }
 }

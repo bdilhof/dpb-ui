@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components\UI\Buttons;
+namespace Dpb\Ui\View\Components\Buttons;
 
 use Closure;
 use Illuminate\Contracts\View\View;
@@ -21,6 +21,6 @@ class Dropdown extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.ui.buttons.dropdown');
+        return view('ui::buttons.dropdown');
     }
 }

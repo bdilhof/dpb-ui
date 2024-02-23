@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components\UI\Navigation;
+namespace Dpb\Ui\View\Components\Navigation;
 
 use Closure;
 use Illuminate\Contracts\View\View;
@@ -10,11 +10,11 @@ class Dropdown extends Component
 {
     public function __construct()
     {
-        //
+
     }
 
     public function render(): View|Closure|string
     {
-        return view('components.ui.navigation.dropdown');
+        return view('ui::navigation.dropdown');
     }
 }

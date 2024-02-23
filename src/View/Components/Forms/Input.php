@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components\UI\Forms;
+namespace Dpb\Ui\View\Components\Forms;
 
 use Closure;
 use Illuminate\Contracts\View\View;
@@ -21,6 +21,6 @@ class Input extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.ui.forms.input');
+        return view('ui::forms.input');
     }
 }

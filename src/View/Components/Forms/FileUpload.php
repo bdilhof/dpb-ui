@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components\UI\Forms;
+namespace Dpb\Ui\View\Components\Forms;
 
 use Closure;
 use Illuminate\Contracts\View\View;
@@ -21,6 +21,6 @@ class FileUpload extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.ui.forms.file-upload');
+        return view('ui::forms.file-upload');
     }
 }

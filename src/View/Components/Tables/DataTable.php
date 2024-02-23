@@ -15,6 +15,6 @@ class DataTable extends Component
 
     public function render(): View|Closure|string
     {
-        return view('components.ui.table.data-table');
+        return view('ui::table.data-table');
     }
 }
