@@ -5,142 +5,84 @@
 1. Install package
 
 ```bash
-composer require vrmnt/ui
+composer require dpb/ui
 ```
 
-2. Put UiServiceProvider into your project **config/app.php**
+2. Put `UiServiceProvider` into your project **config/app.php**
 
 ```php
 /*
  * Package Service Providers...
  */
 
-\Vrmnt\Ui\UiServiceProvider::class,
+\Dpb\Ui\UiServiceProvider::class,
 ```
 
 3. Use components
 
 ```html
-<x-ui::custom-component>
+<x-ui:component-name parameters />
 ```
 
 ## Components
 
-### Navbar
+### General
 
-```php
-$languages = ['en', 'sk', 'cz', 'hu'];
-$menu = [
-    [
-        'title' => __('pages.admin'),
-        'href' => route('admin.index'),
-        'active' => request()->routeIs('admin.*'),
-    ],
-    [
-        'title' => __('common.applications'),
-        'href' => '#',
-        'active' => false,
-        'submenu' => [
-            [
-                'title' => __('pages.goods-receiving'),
-                'href' => route('goods-receiving.index'),
-                'active' => request()->routeIs('goods-receiving.*'),
-            ],
-            [
-                'title' => __('pages.stock-takings'),
-                'href' => route('stocktakes.index'),
-                'active' => request()->routeIs('stocktakes.*'),
-            ],
-        ],
-    ],
-];
-```
+#### Logo
+
+This components render DPB logo
+
+##### Parameters
+
+- `width` (integer, 100): Logo width
+- `height` (integer, 100): Logo height
 
 ```html
-<x-ui::navbar :menu="$menu" :languages="$languages" />
+<x-ui::logo />
+```
+
+### Layouts
+
+#### App
+
+This is basic layout for most of the pages.
+
+##### Parameters
+
+- `title` Page title. Will be used in page header and head title
+
+```html
+<x-ui::layout.app title="Dashboard">
+  <!-- Page content -->
+</x-ui::layout.app>
 ```
 
 ### Tables
 
-```html
-<x-ui::table>
-    <x-slot name="thead">
-        <tr class="align-middle">
-            <th>{{ __('item.title')}}</th>
-        </tr>
-    </x-slot>
-    <x-slot name="tbody">
-        @forelse($collection as $item)
-        <tr class="align-middle">
-            <td>{{ $item->title}}</td>
-        </tr>
-        @empty
-        <x-ui::table-empty colspan="1" />
-        @endforelse
-    </x-slot>
-</x-ui::table>
-```
+#### DataTable
 
-### Filters
+##### Parameters
+
+- `items` (Collection, null): Table items
+- `columns` (Array, []): List of columns which will be rendered in table
 
 ```html
-<x-ui::filter :url="route('index')" :open="$filter !== null">
-    <x-ui::filter-item>
-        <x-ui::forms.select
-            :label="__('items.column')"
-            :value="$filter['equal']['column'] ?? ''"
-            :options="$options"
-            name="filter[equal][column]"
-            id="column"
-        ></x-ui::forms.select>
-    </x-ui::filter-item>
-</x-ui::filter>
+<x-ui::tables.data-table :items="$items" :columns="['col1', 'col2', 'col3']" />
 ```
 
-### Forms
-
-#### Form
-
-```html
-<x-ui::form :action="route('stocktakes.store')">
-    ...
-</x-ui::form>
-```
-> Form component already contains CSRF field and displaying of errors.
-
-#### Input
-
-```html
-<x-ui::forms.input
-    :label="$label"
-    name=""
-    id=""
-    placeholder=""
-    value=""
-    required="true"
-></x-ui::forms.input>
-```
+### Buttons
 
 #### Button
 
-```html
-<x-ui::button
-    :link="$link"
-    :text=""
-    icon=""
-    type=""
-></x-ui::button>
-```
+##### Parameters
 
-#### Select
+- `display` (Boolean, true): Condition based on which will be component rendered
+- `icon` (string, ''): Name of Font Awesome icon
+- `link` (string, ''): Button link
+- `text` (string, ''): Button text
+- `outline` (Boolean, false): Outlined button
+- `color` (String, 'primary'): Button color. Can be primary, secondary, danger, alert, success
 
 ```html
-<x-ui::forms.select2
-    :label="$label"
-    :value="$value"
-    name=""
-    id=""
-    options="$options"
-    required="true"
-></x-ui::forms.select2>
+<x-ui::buttons.button />
 ```
