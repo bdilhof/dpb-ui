@@ -1,6 +1,7 @@
 @props([
     "items",
     "columns",
+    "columnNames",
 ])
 
 <div class="table-responsive">
@@ -8,7 +9,7 @@
         <thead>
             <tr>
                 @foreach($columns as $column)
-                <th>{{ $column }}</th>
+                <th>{{ $columnNames[$loop->index] ?? $column }}</th>
                 @endforeach
             </tr>
         </thead>
