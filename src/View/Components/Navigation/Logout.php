@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components\ui\navigation;
+namespace Dpb\Ui\View\Components\Navigation;
 
 use Closure;
 use Illuminate\Contracts\View\View;
