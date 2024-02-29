@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components\UI\Tables;
+namespace Dpb\Ui\View\Components\Tables;
 
 use Closure;
 use Illuminate\Contracts\View\View;
