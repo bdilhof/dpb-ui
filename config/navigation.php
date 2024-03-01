@@ -1,11 +1,11 @@
 <?php
 
 return [
-    'homepage' => route('dashboard'),
+    'homepage' => 'homepage',
     'items' => [
         [
-            'label' => 'Home',
-            'url' => '/'
+            'label' => 'Home', // Enter title of menu item
+            'url' => 'homepage' // Enter named route, e.g. 'users.index'
         ],
     ]
 ];
