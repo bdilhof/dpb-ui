@@ -18,7 +18,13 @@ composer require dpb/ui
 \Dpb\Ui\UiServiceProvider::class,
 ```
 
-3. Use components
+3. Publish config
+
+```bash
+php artisan vendor:publish --tag=config
+```
+
+4. Use components
 
 ```html
 <x-ui:component-name parameters />
@@ -86,5 +92,3 @@ This is basic layout for most of the pages.
 ```html
 <x-ui::buttons.button />
 ```
-
-# php artisan vendor:publish --tag=my-package-config

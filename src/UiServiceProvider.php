@@ -16,6 +16,20 @@ class UiServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'ui');
         $this->loadTranslationsFrom(__DIR__ . '/../resources/lang', 'ui');
 
+        if ($this->app->runningInConsole()) {
+
+            // Publishing config.
+            $this->publishes([
+                __DIR__ . '/../config/navigation.php' => config_path('navigation.php'),
+            ], 'config');
+
+            // Publishing the views.
+            $this->publishes([
+                __DIR__ . '/../resources/views' => resource_path('views/vendor/auth'),
+            ], 'views');
+
+        }
+
         Blade::componentNamespace('Dpb\\Ui\\View\\Components', 'ui');
     }
 
