@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class submit extends Component
+class Submit extends Component
 {
     public function render()
     {
