@@ -86,3 +86,5 @@ This is basic layout for most of the pages.
 ```html
 <x-ui::buttons.button />
 ```
+
+# php artisan vendor:publish --tag=my-package-config
