@@ -10,6 +10,6 @@ class DashboardCard extends Component
 {
     public function render()
     {
-        return view('ui::logo');
+        return view('ui::dashboard-card');
     }
 }
