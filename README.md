@@ -21,7 +21,7 @@ composer require dpb/ui
 3. Publish config
 
 ```bash
-php artisan vendor:publish --tag=config
+php artisan vendor:publish --tag=ui-config
 ```
 
 4. Use components

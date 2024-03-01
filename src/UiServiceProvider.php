@@ -21,12 +21,12 @@ class UiServiceProvider extends ServiceProvider
             // Publishing config.
             $this->publishes([
                 __DIR__ . '/../config/navigation.php' => config_path('navigation.php'),
-            ], 'config');
+            ], 'ui-config');
 
             // Publishing the views.
             $this->publishes([
                 __DIR__ . '/../resources/views' => resource_path('views/vendor/auth'),
-            ], 'views');
+            ], 'ui-views');
 
         }
 
