@@ -2,7 +2,7 @@
   <div class="container-xl">
 
     <!-- Logo -->
-    <a class="navbar-brand" href="{{ $homepage }}">
+    <a class="navbar-brand" href="{{ route($homepage) }}">
         <div class="d-flex align-items-center gap-2">
             <x-ui::logo width="35" height="35" />
             <span>{{ config("app.name") }}</span>
@@ -20,7 +20,7 @@
         @auth
           @foreach($items as $item)
             <li class="nav-item">
-              <a @class(['nav-link']) href="{{ $item['url'] }}">{{ $item['label'] }}</a>
+              <a @class(['nav-link', 'active' => request()->routeIs($item['url'])]) href="{{ route($item['url']) }}">{{ $item['label'] }}</a>
             </li>
           @endforeach
         @endauth
