@@ -1,16 +1,30 @@
 @props([
     "text" => "Stránka bez názvu",
-    "backUrl"
+    "backUrl",
+    "buttons" => null,
 ])
 
-<x-ui::buttons.button
-    :display="isset($backUrl)"
-    :link="$backUrl"
-    :text="trans('ui.back')"
-    icon="arrow-left"
-    class="btn btn-outline-secondary"
-/>
+<div class="row">
+    <div class="col">
+        <div class="d-md-flex justify-content-between align-items-center">
+            <div class="hstack gap-3">
 
-<h1 class="h3 m-0 text-nowrap">{{ $text }}</h1>
+                <x-ui::buttons.button
+                    :display="isset($backUrl)"
+                    :link="$backUrl"
+                    :text="trans('ui.back')"
+                    icon="arrow-left"
+                    class="btn-outline-secondary"
+                />
 
-{{ $slot }}
+                <h1 class="h3 m-0 text-nowrap">{{ $text }}</h1>
+
+                {{ $slot }}
+
+            </div>
+            <div class="hstack gap-2 text-nowrap">
+                {{ $buttons }}
+            </div>
+        </div>
+    </div>
+</div>
