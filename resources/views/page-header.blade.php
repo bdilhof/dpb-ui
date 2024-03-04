@@ -1,7 +1,7 @@
 @props([
     "text" => "Stránka bez názvu",
     "backUrl",
-    "buttons" => null,
+    "buttons",
 ])
 
 <div class="row">
@@ -23,7 +23,7 @@
 
             </div>
             <div class="hstack gap-2 text-nowrap">
-                {{ $buttons }}
+                {!! $buttons !!}
             </div>
         </div>
     </div>
