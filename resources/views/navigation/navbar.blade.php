@@ -19,8 +19,25 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         @auth
           @foreach($items as $item)
-            <li class="nav-item">
-              <a @class(['nav-link', 'active' => request()->routeIs($item['url'])]) href="{{ route($item['url']) }}">{{ $item['label'] }}</a>
+            <li @class(['nav-item', 'dropdown' => array_key_exists('subpages', $item)])>
+              @if(array_key_exists('subpages', $item))
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  {{ $item['label'] }}
+                </a>
+                <ul class="dropdown-menu">
+                  @foreach($item['subpages'] as $subpage)
+                  <li>
+                    <a class="dropdown-item" href="{{ route($subpage['url']) }}">
+                      {{ $subpage['label'] }}
+                    </a>
+                  </li>
+                  @endforeach              
+                </ul>
+              @else
+                <a @class(['nav-link', 'active' => request()->routeIs($item['url'])]) href="{{ route($item['url']) }}">
+                  {{ $item['label'] }}
+                </a>
+              @endif
             </li>
           @endforeach
         @endauth
