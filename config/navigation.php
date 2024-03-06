@@ -4,14 +4,14 @@ return [
     'homepage' => 'homepage',
     'items' => [
         [
-            'label' => 'Home', // Enter title of menu item
+            'label' => 'pages.homepage', // Enter language key for page title or just plain string name
             'url' => 'homepage' // Enter named route, e.g. 'users.index'
         ],
         [
             'label' => 'Dropdown menu',
             'subpages' => [
                 [
-                    'label' => 'Dropdown item 1',
+                    'label' => 'pages.dropdown1', 
                     'url' => 'dropdown1.index',
                 ],
                 [

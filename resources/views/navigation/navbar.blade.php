@@ -27,8 +27,8 @@
                 <ul class="dropdown-menu">
                   @foreach($item['subpages'] as $subpage)
                   <li>
-                    <a class="dropdown-item" href="{{ route($subpage['url']) }}">
-                      {{ $subpage['label'] }}
+                    <a @class(['dropdown-item', 'active' => request()->routeIs($subpage['url'])]) href="{{ route($subpage['url']) }}">
+                      {{ trans($subpage['label']) }}
                     </a>
                   </li>
                   @endforeach              
