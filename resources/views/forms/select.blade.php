@@ -1,14 +1,18 @@
 @props([
-    "name",
-    "items",
-    "label",
+    "name" => "",
+    "items" => collect([]),
+    "label" => "",
     "value" => null
 ])
 
 <div>
 
     <!-- Label -->
-    <label for="assigned_to" class="form-label">{{ $label }}</label>
+    @if($label)
+    <label for="assigned_to" class="form-label">
+        {{ $label }}
+    </label>
+    @endif
 
     <!-- Select -->
     <select {{ $attributes }} name="{{ $name }}" class="form-select">
