@@ -3,7 +3,7 @@
 <div class="dropdown">
 
     <button
-        class="btn btn-outline-secondary dropdown-toggle"
+        {{ $attributes->merge(['class' => 'btn btn-outline-secondary dropdown-toggle']) }}
         type="button"
         data-bs-toggle="dropdown"
         aria-expanded="false">
