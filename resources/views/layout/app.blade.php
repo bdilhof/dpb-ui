@@ -15,46 +15,18 @@
   </head>
 
   <body id="app" class="bg-light">
-
-    @php
-    $navItems = [
-        [
-            "title" => "Osoby",
-            "route" => 'employees.index',
-        ],
-        [
-            "title" => "Lokácie",
-            "route" => 'locations.index',
-        ],
-    ];
-    @endphp
-
-    <x-navbar :items="$navItems" />
+    <x-ui::navigation.navbar />
 
     <main class="py-4">
-        <div class="container-xl vstack gap-4">
-            <!-- @include('_partials.flash-messages') -->
-
-            <!-- Header -->
-            <div class="row">
-                <div class="col">
-                    <div class="d-md-flex justify-content-between align-items-center">
-                        <div class="hstack gap-3">
-                            <x-ui::page-header :backUrl="$backUrl" text="{{ $title }}" />
-                        </div>
-                        <div class="hstack gap-2 text-nowrap">
-                            {{ $buttons ?? null }}
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+        <div class="container-xl vstack gap-4">          
+            <x-ui::flash-messages />
+            <x-ui::page-header :$backUrl text="{{ $title }}" :buttons="$buttons ?? null" />
             {{ $slot }}
         </div>
     </main>
 
-    {{ $bottom ?? null }}
+    @stack('bottom')
     @vite(['resources/js/app.js'])
-    {{ $jsFooter ?? null }}
+    @stack('jsFooter')
   </body>
 </html>
