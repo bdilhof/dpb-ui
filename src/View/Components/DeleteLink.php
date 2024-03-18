@@ -8,9 +8,11 @@ use Illuminate\View\Component;
 
 class DeleteLink extends Component
 {
+    public $uniqueId;
+
     public function __construct()
     {
-        //
+        $this->uniqueId = uniqid();
     }
 
     public function render(): View|Closure|string
