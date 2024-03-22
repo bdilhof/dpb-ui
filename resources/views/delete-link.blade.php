@@ -1,6 +1,6 @@
 @props(['url'])
 
-<a href="#" data-bs-toggle="modal" data-bs-target="#modal_{{ $uniqueId }}">
+<a href="#" data-bs-toggle="modal" data-bs-target="#modal_{{ $uniqueId }}" {{ $attributes }}>
   @if($slot->isEmpty())
     <span class="btn btn-sm btn-outline-danger">
       <i class="fa-solid fa-fw fa-trash"></i>
