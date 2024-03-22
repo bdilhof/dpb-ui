@@ -4,9 +4,14 @@
 $uniqueId = uniqid();
 @endphp
 
-<a href="#" class="dropdown-item text-danger" data-bs-toggle="modal" data-bs-target="#modal_{{ $uniqueId }}">
-    <span class="me-1"><i class="fa-solid fa-fw fa-trash"></i></span>
-    <span>{{ trans('ui.delete') }}</span>
+<a href="#" data-bs-toggle="modal" data-bs-target="#modal_{{ $uniqueId }}">
+  @if($slot->isEmpty())
+    <span class="btn btn-sm btn-outline-danger">
+      <i class="fa-solid fa-fw fa-trash"></i>
+    </span>
+  @else
+    {{ $slot }}
+  @endif
 </a>
 
 @push('bottom')
