@@ -1,9 +1,5 @@
 @props(['url'])
 
-@php
-$uniqueId = uniqid();
-@endphp
-
 <a href="#" data-bs-toggle="modal" data-bs-target="#modal_{{ $uniqueId }}">
   @if($slot->isEmpty())
     <span class="btn btn-sm btn-outline-danger">
