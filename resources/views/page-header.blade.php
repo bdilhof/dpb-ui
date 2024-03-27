@@ -17,7 +17,7 @@
                     class="btn-outline-secondary"
                 />
 
-                <h1 class="h3 m-0 text-nowrap">{{ $text }}</h1>
+                <h1 class="h3 m-0">{{ $text }}</h1>
 
                 {{ $slot }}
 
