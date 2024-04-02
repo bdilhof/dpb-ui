@@ -2,11 +2,16 @@
     "label",
     "name",
     "id",
-    "checked" => false
+    "checked" => false,
+    "default" => null,
 ])
 
 <div class="form-check">
-    <input type="hidden" name="{{ $name }}" value="0">
+
+    @if(isset($default))
+    <input type="hidden" name="{{ $name }}" value="{{ $default }}">
+    @endif
+
     <input {{ $attributes }}
         @checked($checked)
         class="form-check-input"
