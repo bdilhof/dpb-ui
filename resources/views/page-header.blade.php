@@ -22,7 +22,7 @@
                 {{ $slot }}
 
             </div>
-            <div class="hstack gap-2 text-nowrap">
+            <div class="hstack gap-3 text-nowrap">
                 {!! $buttons !!}
             </div>
         </div>
