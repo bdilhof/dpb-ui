@@ -2,7 +2,7 @@
     "display" => true,
     "icon" => null,
     "link",
-    "text",
+    "text" => "",
 ])
 
 @if($display)
