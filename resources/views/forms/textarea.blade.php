@@ -1,16 +1,21 @@
-@props(["name","label" => "", "id", "value" => ""])
+@props([
+    "name",
+    "label" => "",
+    "id",
+    "value" => "",
+])
 
 <div>
-
     @if($label)
-    <label for="{{ $id }}" class="form-label">{{ $label }}</label>
+    <label for="{{ $id }}" class="form-label">
+        {{ $label }}
+    </label>
     @endif
 
-    <textarea {{ $attributes }}
-        @class(["form-control", "is-invalid" => $errors->has($name)])
+    <textarea {{ $attributes->merge(['class' => $getDefaultClass()]) }}
         id="{{ $id }}"
         name="{{ $name }}"
-    >{{ $value }}</textarea>
+    >{!! html_entity_decode($value) !!}</textarea>
 
     @error($name)
         <div class="invalid-feedback">
