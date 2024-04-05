@@ -8,17 +8,17 @@ use Illuminate\View\Component;
 
 class Textarea extends Component
 {
-    /**
-     * Create a new component instance.
-     */
-    public function __construct()
+    public function getDefaultClass()
     {
-        //
+        if (false) {
+            $class = "form-control is-invalid";
+        } else {
+            $class = "form-control";
+        }
+    
+        return $class;
     }
 
-    /**
-     * Get the view / contents that represent the component.
-     */
     public function render(): View|Closure|string
     {
         return view('ui::forms.textarea');
