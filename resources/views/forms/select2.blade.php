@@ -13,7 +13,7 @@
     @endif
 
     <select data-placeholder="{{ trans('ui.choose') }}" name="{{ $name }}" id="{{ $id }}" @class(["js-select2", "is-invalid" => $errors->has($name)])>
-        <option disabled>{{ trans('ui.choose') }}</option>
+        <option @selected(!$value) disabled>{{ trans('ui.choose') }}</option>
         @foreach($options as $option)
         <option @selected($value == $option->value) value="{{ $option->value }}">{{ $option->label }}</option>           
         @endforeach
