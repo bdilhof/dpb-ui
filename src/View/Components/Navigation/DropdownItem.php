@@ -21,6 +21,6 @@ class DropdownItem extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('ui::buttons.dropdown-item');
+        return view('ui::navigation.dropdown-item');
     }
 }
