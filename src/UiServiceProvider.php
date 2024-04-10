@@ -25,7 +25,7 @@ class UiServiceProvider extends ServiceProvider
 
             // Publishing the views.
             $this->publishes([
-                __DIR__ . '/../resources/views' => resource_path('views/vendor/auth'),
+                __DIR__ . '/../resources/views' => resource_path('views/vendor/ui'),
             ], 'ui-views');
 
         }
