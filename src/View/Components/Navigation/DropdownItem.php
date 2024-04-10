@@ -1,6 +1,6 @@
 <?php
 
-namespace Dpb\Ui\View\Components\Buttons;
+namespace Dpb\Ui\View\Components\Navigation;
 
 use Closure;
 use Illuminate\Contracts\View\View;
