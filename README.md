@@ -63,6 +63,18 @@ This is basic layout for most of the pages.
 </x-ui::layout.app>
 ```
 
+### Form
+
+#### Input
+
+```html
+<x-ui::forms.input
+  label="Meno"
+  id="firstname"
+  name="firstname"
+/>
+```
+
 ### Tables
 
 #### DataTable
