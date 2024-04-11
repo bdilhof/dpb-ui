@@ -78,6 +78,15 @@ This is basic layout for most of the pages.
 
 ### Buttons
 
+#### Submit
+
+```html
+<x-ui::buttons.submit
+  id="submit"
+  text="Save"
+/>
+```
+
 #### Button
 
 ##### Parameters
