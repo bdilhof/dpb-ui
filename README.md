@@ -42,6 +42,7 @@ This components render DPB logo
 
 - `width` (integer, 100): Logo width
 - `height` (integer, 100): Logo height
+- `color` (string, "#ed1c24"): Logo color (use wisely)
 
 ```html
 <x-ui::logo />
@@ -63,7 +64,15 @@ This is basic layout for most of the pages.
 </x-ui::layout.app>
 ```
 
-### Form
+### Forms
+
+#### Form
+
+```html
+<x-ui::forms.form :action="route('tickets.update', $ticket->id)" method="PATCH">
+  <!-- Form fields -->
+</x-ui::forms.form>
+```
 
 #### Input
 
@@ -77,42 +86,59 @@ This is basic layout for most of the pages.
 #### Select
 
 ```html
-  <x-ui::forms.select
-      label="Label"
-      id="id"
-      name="name"
-      :items="$tickets->toHtmlSelect('id', 'title')"
-      :value="5"
-  />
+<x-ui::forms.select
+  label="Label"
+  id="id"
+  name="name"
+  :items="$tickets->toHtmlSelect('id', 'title')"
+  :value="5"
+/>
 ```
 
 #### Select2
 
 ```html
-  <x-ui::forms.select2
-      label="Label"
-      id="id"
-      name="name"
-      :options="$tickets->toHtmlSelect('id', 'title')"
-      :value="5"
-  />
+<x-ui::forms.select2
+  label="Label"
+  id="id"
+  name="name"
+  :options="$tickets->toHtmlSelect('id', 'title')"
+  :value="5"
+/>
+```
+
+#### Textarea
+
+```html
+<x-ui::forms.textarea
+  label="Place your label"
+  id="bodytext"
+  name="bodytext"
+  value="Lorem ipsum dolor sit amet..."
+/>
 ```
 
 #### Checkbox
 
 ```html
-
+<x-ui::forms.checkbox
+  name="checkbox"
+  id="checkbox"
+  label="Place your label"
+  value="yes"
+  default="no"
+/>
 ```
 
 #### File Upload
 
 ```html
-  <x-ui::forms.file-upload
-      name="test"
-      id="test"
-      helpText="You can upload: PNG, BMP, JPG. Maximum uploaded file size is 2MB"
-      label="Fotografia"
-  />
+<x-ui::forms.file-upload
+  name="test"
+  id="test"
+  helpText="You can upload: PNG, BMP, JPG. Maximum uploaded file size is 2MB"
+  label="Fotografia"
+/>
 ```
 
 ### Tables
@@ -125,7 +151,10 @@ This is basic layout for most of the pages.
 - `columns` (Array, []): List of columns which will be rendered in table
 
 ```html
-<x-ui::tables.data-table :items="$items" :columns="['col1', 'col2', 'col3']" />
+<x-ui::tables.data-table
+  :items="$items"
+  :columns="['col1', 'col2', 'col3']"
+/>
 ```
 
 ### Buttons
