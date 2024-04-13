@@ -8,7 +8,7 @@
 <div>
 
     @if($label)
-    <label for="attachment" class="form-label">
+    <label for="{{ $id }}" class="form-label">
         {{ $label }}
     </label>
     @endif
