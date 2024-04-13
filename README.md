@@ -74,6 +74,46 @@ This is basic layout for most of the pages.
   name="firstname"
 />
 ```
+#### Select
+
+```html
+  <x-ui::forms.select
+      label="Label"
+      id="id"
+      name="name"
+      :items="$tickets->toHtmlSelect('id', 'title')"
+      :value="5"
+  />
+```
+
+#### Select2
+
+```html
+  <x-ui::forms.select2
+      label="Label"
+      id="id"
+      name="name"
+      :options="$tickets->toHtmlSelect('id', 'title')"
+      :value="5"
+  />
+```
+
+#### Checkbox
+
+```html
+
+```
+
+#### File Upload
+
+```html
+  <x-ui::forms.file-upload
+      name="test"
+      id="test"
+      helpText="You can upload: PNG, BMP, JPG. Maximum uploaded file size is 2MB"
+      label="Fotografia"
+  />
+```
 
 ### Tables
 
