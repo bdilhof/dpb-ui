@@ -15,7 +15,7 @@
 
     <input @class(["form-control", "is-invalid" => $errors->has($name)]) type="file" id="{{ $id }}" name="{{ $name }}">
 
-    @if($helpText)
+    @if(isset($helpText))
     <div class="form-text">
         {{ $helpText }}
     </div>
