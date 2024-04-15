@@ -68,6 +68,11 @@ This is basic layout for most of the pages.
 
 #### Form
 
+Render the form element. It contains already CSRF protection.
+
+- `action` (Mixed, ""): Target of the HTML form
+- `method` (String, "POST"): Method of the form. Can be GET, POST, PUT, PATCH or DELETE
+
 ```html
 <x-ui::forms.form :action="route('tickets.update', $ticket->id)" method="PATCH">
   <!-- Form fields -->
@@ -75,6 +80,11 @@ This is basic layout for most of the pages.
 ```
 
 #### Input
+
+- `label` (String, ""): Label for checkbox
+- `name` (String, ""): Name of the checkbox
+- `id` (String, ""): Element ID
+- `value` (String, ""): Default value of the input element
 
 ```html
 <x-ui::forms.input
@@ -120,6 +130,12 @@ This is basic layout for most of the pages.
 
 #### Checkbox
 
+- `label` (String, ""): Label for checkbox
+- `name` (String, ""): Name of the checkbox
+- `id` (String, ""): Element ID
+- `checked` (Boolean, false): Define if the checkbox has to be checked
+- `default` (String, ""): Default value which will be sent if checkbox is unchecked
+
 ```html
 <x-ui::forms.checkbox
   name="checkbox"
@@ -131,6 +147,11 @@ This is basic layout for most of the pages.
 ```
 
 #### File Upload
+
+- `label` (String, ""): Label for checkbox
+- `name` (String, ""): Name of the checkbox
+- `id` (String, ""): Element ID
+- `helpText` (String, ""): Help text for the file-upload
 
 ```html
 <x-ui::forms.file-upload
