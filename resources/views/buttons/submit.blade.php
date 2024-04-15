@@ -1,5 +1,9 @@
-@props(["id", "text", "loadingText" => "..."])
+@props([
+    "id",
+    "text",
+    "loadingText" => "..."
+])
 
-<button id="{{ $id }}" type="submit" class="btn btn-block btn-primary w-100" onclick="addSpinerAndDisable('#{{ $id }}', '{{ $loadingText }}')">
+<button {{ $attributes->merge(['class' => 'btn btn-block btn-primary w-100']) }} id="{{ $id }}" type="submit" onclick="addSpinerAndDisable('#{{ $id }}', '{{ $loadingText }}')">
     {{ $text }}
 </button>
