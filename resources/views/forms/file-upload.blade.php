@@ -13,7 +13,7 @@
     </label>
     @endif
 
-    <input @class(["form-control", "is-invalid" => $errors->has($name)]) type="file" id="{{ $id }}" name="{{ $name }}">
+    <input @class(["form-control", "is-invalid" => $errors->has($name)]) type="file" id="{{ $id }}" name="{{ $name }}" {{ $attributes }}>
 
     @if(isset($helpText))
     <div class="form-text">
