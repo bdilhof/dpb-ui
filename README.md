@@ -91,6 +91,12 @@ Render the form element. It contains already CSRF protection.
 ```
 #### Select
 
+- `name` (String, ""): Name of the element
+- `items` (Collection, []): Collection with options for select
+- `label` (String, ""): Label for element
+- `value` (String, ""): Selected option
+- `id` (String, ""): Element ID
+
 ```html
 <x-ui::forms.select
   label="Label"
@@ -103,6 +109,12 @@ Render the form element. It contains already CSRF protection.
 
 #### Select2
 
+- `label` (String, ""): Label for element
+- `id` (String, ""): Element ID
+- `name` (String, ""): Name of the element
+- `options` (Collection, []): Collection with options for select
+- `value` (String, ""): Selected option
+
 ```html
 <x-ui::forms.select2
   label="Label"
@@ -114,6 +126,11 @@ Render the form element. It contains already CSRF protection.
 ```
 
 #### Textarea
+
+- `name` (String, ""): Name of the element
+- `label` (String, ""): Label for element
+- `id` (String, ""): Element ID
+- `value` (String, ""): Default value of the element
 
 ```html
 <x-ui::forms.textarea
