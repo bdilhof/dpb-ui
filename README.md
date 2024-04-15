@@ -38,8 +38,6 @@ php artisan vendor:publish --tag=ui-config
 
 This components render DPB logo
 
-##### Parameters
-
 - `width` (integer, 100): Logo width
 - `height` (integer, 100): Logo height
 - `color` (string, "#ed1c24"): Logo color (use wisely)
@@ -53,8 +51,6 @@ This components render DPB logo
 #### App
 
 This is basic layout for most of the pages.
-
-##### Parameters
 
 - `title` Page title. Will be used in page header and head title
 
@@ -166,8 +162,6 @@ Render the form element. It contains already CSRF protection.
 
 #### DataTable
 
-##### Parameters
-
 - `items` (Collection, null): Table items
 - `columns` (Array, []): List of columns which will be rendered in table
 
@@ -190,8 +184,6 @@ Render the form element. It contains already CSRF protection.
 ```
 
 #### Button
-
-##### Parameters
 
 - `display` (Boolean, true): Condition based on which will be component rendered
 - `icon` (string, ''): Name of Font Awesome icon
