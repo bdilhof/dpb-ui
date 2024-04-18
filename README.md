@@ -46,6 +46,16 @@ This components render DPB logo
 <x-ui::logo />
 ```
 
+#### Delete Link
+
+This component renders delete button which will display confirmation in modal window.
+
+- `url` (string, ""): URL for delete action
+
+```html
+<x-ui::delete-link url="" />
+```
+
 ### Layouts
 
 #### App
