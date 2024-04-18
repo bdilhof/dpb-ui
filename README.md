@@ -187,6 +187,25 @@ Render the form element. It contains already CSRF protection.
 
 ### Tables
 
+#### Table
+
+```html
+<x-ui::tables.table>
+    <x-slot name="thead">
+        <tr>
+            <th>col</th>
+            <th>col</th>
+        </tr>
+    </x-slot>
+    <x-slot name="tbody">
+        <tr>
+            <td>col</td>
+            <td>col</td>
+        </tr>
+    </x-slot>
+</x-ui::tables.table>
+```
+
 #### DataTable
 
 - `items` (Collection, null): Table items
