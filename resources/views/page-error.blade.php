@@ -13,10 +13,13 @@
 
             <div class="mb-4 text-center">
                 <h1 class="h4">
-                    <b>Chyba {{ $code ?? "" }}</b>
-                    @if(isset($description))
-                    <br>{{ $description }}
+                    @if(isset($code))
+                    <p class="m-0"><b>Chyba {{ $code ?? "" }}</b></p>
                     @endif
+                    @if(isset($description))
+                    <p class="m-0">{{ $description }}</p>
+                    @endif
+
                 </h1>
             </div>
 
