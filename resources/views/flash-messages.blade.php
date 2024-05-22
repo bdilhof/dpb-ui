@@ -1,3 +1,14 @@
+<!-- Staging notice -->
+@env('staging')
+    <div class="alert alert-dismissible fade show alert-warning m-0" role="alert">
+        <h4 class="alert-heading">Testovacie prostredie</h4>
+        <p>Toto je testovacia verzia projektu, určená výlučne na prehliadanie a skúšanie nových funkcionalít pred ich nasadením do produkčného prostredia.</p>
+        <hr>
+        <p class="mb-0">Prosím, nepoužívajte túto verziu na žiadne iné účely. Pre bežné používanie a živú prevádzku použite produkčnú verziu dostupnú na: <a class="alert-link" href="{{ config('app.url_production') }}" target="_blank">{{ config('app.url_production') }}</a></p>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+@endenv
+
 @if(session('success'))
     <div class="alert alert-dismissible fade show alert-success m-0" role="alert">
         {{ session('success') }}
