@@ -20,7 +20,7 @@
 @endif
 
 @if(session('info'))
-    <div class="alert alert-dismissible fade show alert-primary m-0" role="alert">
+    <div class="alert alert-dismissible fade show alert-secondary m-0" role="alert">
         {{ session('info') }}
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
